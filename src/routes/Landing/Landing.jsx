@@ -1,3 +1,3 @@
 export default function Landing() {
-    return(<>Hello WORLD</>);
+    return(<div className="font-serif">Hello WORLD</div>);
 }
