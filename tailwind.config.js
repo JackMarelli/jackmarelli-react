@@ -6,7 +6,7 @@ module.exports = {
       sans: ['"FreeSans"'],
       serif: ['"Instrument"'],
       italic: ['"InstrumentItalic"'],
-      symbol: ['"Symbola"'],
+      symbola: ['"Symbola"'],
     },
     extend: {
       colors: {
@@ -19,6 +19,12 @@ module.exports = {
         accent: {
           DEFAULT: "#ff2ce3",
         },
+      },
+      borderWidth: {
+        def: "3px",
+      },
+      height: {
+        def: "3px",
       },
     },
   },
