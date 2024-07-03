@@ -8,7 +8,7 @@ export default function Navbar() {
   const menuOptions = ctx.getMenuOptions();
 
   return (
-    <nav className="text-3xl absolute top-0 w-full py-4">
+    <nav className="text-3xl absolute top-0 w-full py-3 bg-light z-50">
       <GridLayout>
         <div className="col-span-2 w-fit">Jack Marelli</div>
         <div className="h-full flex justify-start items-center">

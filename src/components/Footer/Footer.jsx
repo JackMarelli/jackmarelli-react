@@ -56,14 +56,14 @@ export default function Footer() {
           <h3>Cantù, Italy</h3>
         </FooterSection>
         <div className="col-span-full md:col-start-10 md:col-span-3 mt-64">
-          Back to top <span class="font-symbola text-6xl">☝</span>
+          Back to top <span className="font-symbola text-6xl">☝</span>
         </div>
-        <div class="col-span-full text-9xl font-serif ">
+        <div className="col-span-full text-9xl font-serif ">
           Hire me at{" "}
-          <span class="font-symbola">
+          <span className="font-symbola">
             ⤵ <br />
           </span>
-          <a class="font-italic" href="mailto:marelligiacomo@gmail.com">
+          <a className="font-italic" href="mailto:marelligiacomo@gmail.com">
             marelligiacomo@gmail.com
           </a>
         </div>
