@@ -51,7 +51,6 @@ const MouseCarousel = () => {
       // Image is approximately square
       return { width: "16vw", height: "auto" };
     } else {
-      // Image is not approximately square
       if (img.naturalWidth > img.naturalHeight) {
         return { width: "auto", height: "10vh" };
       } else {
@@ -68,14 +67,14 @@ const MouseCarousel = () => {
   };
 
   return (
-    <div ref={carouselContainerRef} className="h-screen w-full relative z-0">
-      <div ref={detectionZoneRef} className="absolute top-0 left-0 w-full h-full z-10"></div>
+    <div ref={carouselContainerRef} className="h-screen w-full relative z-40">
+      <div ref={detectionZoneRef} className="absolute top-0 left-0 w-full h-full z-40"></div>
       {carouselItems.map((item, index) => (
         <img
           key={index}
           src={carouselImages[item.index]}
           alt={`carousel-${item.index}`}
-          className="absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-30"
           style={{
             left: `${item.x}px`,
             top: `${item.y}px`,
