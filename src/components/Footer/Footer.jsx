@@ -17,13 +17,12 @@ export default function Footer() {
       <GridLayout>
         <FooterSection title="Menu">
           {menuOptions.map((option, index) => (
-            <span key={option}>
-              <AnimatedLink
-                to={`/${option}`}
-                content={option}
-                capitalize={true}
-              />
-            </span>
+            <AnimatedLink
+              key={option}
+              to={`/${option}`}
+              content={option}
+              capitalize={true}
+            />
           ))}
         </FooterSection>
         <FooterSection title="Language">
@@ -55,10 +54,11 @@ export default function Footer() {
         <FooterSection title="Location">
           <h3>Cantù, Italy</h3>
         </FooterSection>
-        <div className="col-span-full md:col-start-10 md:col-span-3 mt-64">
-          Back to top <span className="font-symbola text-6xl">☝</span>
+        <div className="col-start-7 col-span-5 md:col-start-10 md:col-span-3 mt-24 mb-12 md:mt-48">
+          Back to top{" "}
+          <span className="font-symbola text-4xl md:text-6xl">☝</span>
         </div>
-        <div className="col-span-full text-9xl font-serif ">
+        <div className="col-span-full text-[8.5vw] leading-none font-serif ">
           Hire me at{" "}
           <span className="font-symbola">
             ⤵ <br />

@@ -8,7 +8,7 @@ export default function BaseLayout({ children, footer = true, navbar = true }) {
 
   return (
     <ReactLenis root>
-      <div className="w-100 h-fit flex flex-col text-3xl">
+      <div className="w-100 h-fit flex flex-col text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight">
         {navbar && <Navbar />}
         {children}
         {footer && <Footer />}

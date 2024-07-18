@@ -51,7 +51,7 @@ export default function AnimatedLink({ to, content, capitalize }) {
   }, [content]);
 
   return (
-    <Link ref={linkRef} to={to} className={`w-fit ${capitalize && "capitalize"}`}>
+    <Link ref={linkRef} to={to} className={`h-fit w-fit leading-tight ${capitalize && "capitalize"}`}>
       {content}
     </Link>
   );

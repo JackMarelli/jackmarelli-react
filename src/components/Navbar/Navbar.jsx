@@ -8,17 +8,17 @@ export default function Navbar() {
   const menuOptions = ctx.getMenuOptions();
 
   return (
-    <nav className="text-3xl absolute top-0 w-full py-3 bg-light z-50">
+    <nav className="absolute top-0 w-full py-3 bg-light z-50">
       <GridLayout>
-        <div className="col-span-2 w-fit">Jack Marelli</div>
-        <div className="h-full flex justify-start items-center">
+        <div className="col-span-6 xl:col-span-3 w-fit">Jack Marelli</div>
+        <div className="col-span-3 xl:col-span-3 h-full flex justify-start items-center">
           <img
-            className="h-6 w-auto"
+            className="h-4 md:h-5 xl:h-6 w-auto"
             src="assets/images/icons/logo/logo_black.svg"
             alt="Jack Marelli Logo"
           />
         </div>
-        <div className="col-start-7 col-span-5 flex flex-row justify-start items-center">
+        <div className="hidden xl:inline xl:col-start-7 col-span-5 flex flex-row justify-start items-center">
           {menuOptions.map((option, index) => (
             <span key={option}>
               <AnimatedLink
@@ -32,7 +32,8 @@ export default function Navbar() {
             </span>
           ))}
         </div>
-        <div className="col-span-1 flex justify-end">Contact</div>
+        <div className="hidden xl:inline xl:col-span-1 flex justify-end">Contact</div>
+        <div className="xl:hidden col-span-3 text-end ">Menu</div>
       </GridLayout>
     </nav>
   );
