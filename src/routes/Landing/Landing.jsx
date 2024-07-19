@@ -112,21 +112,50 @@ export default function Landing() {
           className="hidden md:block absolute top-0 left-0 w-full h-full z-20"
         ></div>
       </div>
-        <GridLayout cn="place-items-end">
-          <SectionHeader hr={true} />
-          <GridWork
-            cols={6}
-            image={`assets/images/thumbnails/uniq_thumb.png`}
-            title={`Uniq Bar and Bistrot`}
-            link="https://www.behance.net/gallery/169770509/UNIQ-Bar-Restourant-Identity-Concept"
-            />
-          <GridWork
-            cols={3}
-            image={`assets/images/thumbnails/regular_thumb.png`}
-            title={`Regular Magazine`}
-            link="/work/regular"
-          />
-        </GridLayout>
+      <GridLayout cn="items-end">
+        <SectionHeader hr={true} />
+        <GridWork
+          cols={6}
+          image={`assets/images/work/uniq/uniq_thumb.png`}
+          title={`Uniq Bar and Bistrot`}
+          link="https://www.behance.net/gallery/169770509/UNIQ-Bar-Restourant-Identity-Concept"
+        />
+        <GridWork
+          cols={3}
+          video={`assets/videos/logo_spin.mp4`}
+          title={`Jack Marelli`}
+          link="https://pitch.com/public/a11bd9a9-6432-4e14-8989-5f6288e39d51/4cb5ad97-18fa-47b2-ae99-d8e90e164b47"
+        />
+        <GridWork
+          start={4}
+          cols={6}
+          video={`assets/videos/misuraemme.mp4`}
+          title={`Misuraemme Moodboard Creator`}
+          link="/work/misuraemme"
+        />
+        <GridWork
+          cols={3}
+          image={`assets/images/work/regular/regular_thumb.png`}
+          title={`Regular Magazine`}
+          link="/work/regular"
+        />
+        <GridWork
+          cols={6}
+          image={`assets/images/work/sinapsi/propic_negative.png`}
+          title={`Sinapsi`}
+          link="/work/sinapsi"
+        />
+        <div className="col-span-12 md:col-span-3 aspect-square border border-2 border-dark flex flex-col justify-center items-center">
+          <h2 className="font-serif text-7xl leading-none">All Work</h2>
+          <span className="font-symbola text-7xl leading-none -mt-8">⇁</span>
+        </div>
+        <p className="col-start-1 col-span-full indent-48 font-serif text-6xl">
+          I am all for the details: visual hierarchies, communication throught
+          color and shapes, perfect spacings. Design and code are mediums of
+          expression, through which I bring ideas to life with precision and
+          flair.
+        </p>
+      </GridLayout>
     </BaseLayout>
   );
 }
