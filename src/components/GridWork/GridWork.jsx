@@ -13,7 +13,7 @@ export default function GridWork(props) {
   return (
     <div
       onClick={handleClick}
-      className={`h-fit col-span-full md:col-start-${props.start} md:col-span-${props.cols} md:aspect-square grid grid-cols-12 gap-2 md:block relative cursor-pointer`}
+      className={`h-fit col-span-full md:col-start-${props.start} md:col-span-${props.cols} md:aspect-square grid grid-cols-12 gap-2 md:block relative cursor-pointer mb-4 md:mb-8`}
     >
       <div className="md:hidden col-span-6 flex flex-col justify-start items-start">
         <hr className="md:hidden w-full h-0.5 md:h-1 bg-dark mb-2" />

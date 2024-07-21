@@ -3,6 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout/BaseLayout";
 import GridLayout from "../../layouts/GridLayout/GridLayout";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import GridWork from "../../components/GridWork/GridWork";
+import ExtraSection from "../../components/ExtraSection/ExtraSection";
+import ExtraSectionRow from "../../components/ExtraSectionRow/ExtraSectionRow";
 
 export default function Landing() {
   const detectionZoneRef = useRef();
@@ -113,7 +115,7 @@ export default function Landing() {
         ></div>
       </div>
       <GridLayout cn="items-end">
-        <SectionHeader hr={true} />
+        <SectionHeader content="Featured Work" hr={true} />
         <GridWork
           cols={6}
           image={`assets/images/work/uniq/uniq_thumb.png`}
@@ -145,16 +147,65 @@ export default function Landing() {
           title={`Sinapsi`}
           link="/work/sinapsi"
         />
-        <div className="col-span-12 md:col-span-3 aspect-square border border-2 border-dark flex flex-col justify-center items-center">
-          <h2 className="font-serif text-7xl leading-none">All Work</h2>
-          <span className="font-symbola text-7xl leading-none -mt-8">⇁</span>
+        <div className="col-span-12 md:col-span-3 h-fit md:aspect-square border md:border-2 border-dark flex flex-col justify-center items-center cursor-pointer mb-4 md:mb-8 pt-2">
+          <h2 className="font-serif text-3xl md:text-7xl">All Work</h2>
+          <span className="font-symbola text-4xl md:text-7xl -mt-4 md:-mt-8">⇁</span>
         </div>
-        <p className="col-start-1 col-span-full indent-48 font-serif text-6xl">
+        <p className="col-start-1 col-span-full font-serif text-3xl md:text-7xl">
           I am all for the details: visual hierarchies, communication throught
           color and shapes, perfect spacings. Design and code are mediums of
           expression, through which I bring ideas to life with precision and
           flair.
         </p>
+        <SectionHeader content="Some of my skills" hr={false} />
+
+        <ExtraSection title="Softwares">
+          <ExtraSectionRow
+            content="Figma"
+            detail="UI design and prototyping"
+            bt={false}
+          />
+          <ExtraSectionRow
+            content="Illustrator"
+            detail="Logo and visual elements creation"
+          />
+          <ExtraSectionRow
+            content="Photoshop"
+            detail="Images manipulation and mockup creation"
+          />
+          <ExtraSectionRow
+            content="Lightroom"
+            detail="Images color and light correction"
+          />
+          <ExtraSectionRow
+            content="Indesign"
+            detail="Refined document pagination"
+          />
+        </ExtraSection>
+        <ExtraSection title="Technologies">
+          <ExtraSectionRow
+            content="HTML"
+            detail="Websites Structure"
+            bt={false}
+          />
+          <ExtraSectionRow
+            content="CSS (Tailwind)"
+            detail="Website style, shapes, positioning and colors"
+          />
+          <ExtraSectionRow
+            content="Javascript (React)"
+            detail="Website functionality and complex animations"
+          />
+        </ExtraSection>
+        <ExtraSection title="Languages">
+          <ExtraSectionRow
+            content="English"
+            detail="Can speak, listen read and write"
+            bt={false}
+          />
+          <ExtraSectionRow content="Italian" detail="My native language" />
+          <ExtraSectionRow content="German" detail="Coming soon..." />
+        </ExtraSection>
       </GridLayout>
     </BaseLayout>
   );
