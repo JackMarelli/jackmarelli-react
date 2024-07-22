@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 function shuffleString(str) {
@@ -18,6 +18,7 @@ function shuffleString(str) {
 
 export default function AnimatedLink({ to, content, capitalize }) {
   const linkRef = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const linkElement = linkRef.current;
@@ -25,6 +26,8 @@ export default function AnimatedLink({ to, content, capitalize }) {
     let interval;
 
     const handleMouseEnter = () => {
+      if (isAnimating) return; // Do nothing if animation is already ongoing
+      setIsAnimating(true);
       let count = 0;
       interval = setInterval(() => {
         linkElement.innerHTML = shuffleString(initialText);
@@ -32,23 +35,17 @@ export default function AnimatedLink({ to, content, capitalize }) {
         if (count >= 4) {
           clearInterval(interval);
           linkElement.innerHTML = initialText;
+          setIsAnimating(false); // Reset the flag when animation ends
         }
-      }, 200 / 4);
-    };
-
-    const handleMouseLeave = () => {
-      clearInterval(interval);
-      linkElement.innerHTML = initialText;
+      }, 240 / 4);
     };
 
     linkElement.addEventListener("mouseenter", handleMouseEnter);
-    linkElement.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       linkElement.removeEventListener("mouseenter", handleMouseEnter);
-      linkElement.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [content]);
+  }, [content, isAnimating]);
 
   return (
     <Link ref={linkRef} to={to} className={`h-fit w-fit leading-tight ${capitalize && "capitalize"}`}>

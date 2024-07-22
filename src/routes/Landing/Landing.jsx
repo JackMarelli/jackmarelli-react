@@ -5,6 +5,7 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import GridWork from "../../components/GridWork/GridWork";
 import ExtraSection from "../../components/ExtraSection/ExtraSection";
 import ExtraSectionRow from "../../components/ExtraSectionRow/ExtraSectionRow";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Landing() {
   const detectionZoneRef = useRef();
@@ -14,6 +15,7 @@ export default function Landing() {
   const [carouselItems, setCarouselItems] = useState([]);
   const totalImages = 8; // Adjust the number to match your setup
   const aspectRatioTolerance = 0.3; // Adjust as necessary
+  const navigate = useNavigate();
 
   const carouselImages = Array.from(
     { length: totalImages },
@@ -147,7 +149,7 @@ export default function Landing() {
           title={`Sinapsi`}
           link="/work/sinapsi"
         />
-        <div className="col-span-12 md:col-span-3 h-fit md:aspect-square border md:border-2 border-dark flex flex-col justify-center items-center cursor-pointer mb-4 md:mb-8 pt-2">
+        <div onClick={() => navigate("/work")} className="col-span-12 md:col-span-3 h-fit md:aspect-square border md:border-2 border-dark flex flex-col justify-center items-center cursor-pointer mb-4 md:mb-8 pt-2">
           <h2 className="font-serif text-3xl md:text-7xl">All Work</h2>
           <span className="font-symbola text-4xl md:text-7xl -mt-4 md:-mt-8">⇁</span>
         </div>
@@ -158,7 +160,6 @@ export default function Landing() {
           flair.
         </p>
         <SectionHeader content="Some of my skills" hr={false} />
-
         <ExtraSection title="Softwares">
           <ExtraSectionRow
             content="Figma"
@@ -189,11 +190,11 @@ export default function Landing() {
             bt={false}
           />
           <ExtraSectionRow
-            content="CSS (Tailwind)"
+            content="CSS (Tailwind, Bootstrap)"
             detail="Website style, shapes, positioning and colors"
           />
           <ExtraSectionRow
-            content="Javascript (React)"
+            content="Javascript (React, Lenis)"
             detail="Website functionality and complex animations"
           />
         </ExtraSection>

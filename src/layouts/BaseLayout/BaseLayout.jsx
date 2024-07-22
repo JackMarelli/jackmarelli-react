@@ -1,10 +1,17 @@
+import { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import styles from "./BaseLayout.module.scss"; //used for selection
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 
 export default function BaseLayout({ children, footer = true, navbar = true }) {
-  const lenis = useLenis()
+  const lenis = useLenis();
+  //set lerp value after lenis init
+  useEffect(() => {
+    if (lenis) {
+      lenis.options.lerp = 0.07;
+    }
+  }, [lenis]);
 
   return (
     <ReactLenis root>
@@ -14,5 +21,5 @@ export default function BaseLayout({ children, footer = true, navbar = true }) {
         {footer && <Footer />}
       </div>
     </ReactLenis>
-  )
+  );
 }

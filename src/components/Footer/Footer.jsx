@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react";
+import { useLenis } from "@studio-freight/react-lenis";
 import GridLayout from "../../layouts/GridLayout/GridLayout";
 import FooterSection from "../FooterSection/FooterSection";
 import GlobalContext from "../../store/GlobalContext/GlobalContext";
@@ -7,13 +8,18 @@ import AnimatedLink from "../AnimatedLink/AnimatedLink";
 export default function Footer() {
   const ctx = useContext(GlobalContext);
   const menuOptions = ctx.getMenuOptions();
+  const lenis = useLenis();
+
+  const handleScrollToTop = () => {
+    lenis.scrollTo(0);
+  };
 
   useEffect(() => {
     console.log(ctx.getMenuOptions());
   }, [ctx]);
 
   return (
-    <footer>
+    <footer className="mt-24">
       <GridLayout>
         <FooterSection title="Menu">
           {menuOptions.map((option, index) => (
@@ -52,9 +58,12 @@ export default function Footer() {
           />
         </FooterSection>
         <FooterSection title="Location">
-          <h3>Cantù, Italy</h3>
+          <h3>Milan, Italy</h3>
         </FooterSection>
-        <div className="col-start-7 col-span-5 md:col-start-10 md:col-span-3 mt-24 mb-12 md:mt-48">
+        <div
+          onClick={handleScrollToTop}
+          className="col-start-7 col-span-5 md:col-start-10 md:col-span-3 mt-24 mb-12 md:mt-48 cursor-pointer"
+        >
           Back to top{" "}
           <span className="font-symbola text-4xl md:text-6xl">☝</span>
         </div>
