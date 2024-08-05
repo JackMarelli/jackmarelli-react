@@ -1,19 +1,20 @@
 import BaseLayout from "../../layouts/BaseLayout/BaseLayout";
 import GridLayout from "../../layouts/GridLayout/GridLayout";
 import GridWork from "../../components/GridWork/GridWork";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 export default function Work() {
   return (
     <BaseLayout>
       <GridLayout cn="items-end">
-        <h1 className="col-span-full text-9xl lg:text-[16rem] font-serif mt-32 lg:mt-40">
+        <h1 className="col-span-full text-7xl lg:text-[16rem] font-serif mt-24 lg:mt-40">
           All projects
         </h1>
-        <h5 className="col-span-full mt-24 lg:mt-36 mb-4">
-          <span className="font-symbola">⚞</span>Scroll to discover
-          <span className="font-symbola">⚟</span>
-        </h5>
-        <hr className="col-span-full h-0.5 md:h-[3px] bg-dark mb-8" />
+        <SectionHeader
+          content={"⚞ Scroll to discorver ⚟"}
+          hr={true}
+          hideHrOnMobile={true}
+        />
         <GridWork
           cols={6}
           image={`assets/images/work/uniq/uniq_thumb.png`}

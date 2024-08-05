@@ -3,11 +3,17 @@ import GridLayout from "../../layouts/GridLayout/GridLayout";
 import GlobalContext from "../../store/GlobalContext/GlobalContext";
 import AnimatedLink from "../AnimatedLink/AnimatedLink";
 import { useNavigate } from "react-router-dom";
+import { useLenis } from "@studio-freight/react-lenis";
 
 export default function Navbar() {
   const ctx = useContext(GlobalContext);
   const menuOptions = ctx.getMenuOptions();
   const navigate = useNavigate();
+  const lenis = useLenis();
+
+  const handleScrollToContact = () => {
+    lenis.scrollTo(document.body.scrollHeight);
+  };
 
   return (
     <nav className="absolute top-0 w-full py-3 bg-light z-50 sticky top-0">
@@ -16,7 +22,7 @@ export default function Navbar() {
           onClick={() => navigate("/")}
           className="col-span-6 xl:col-span-3 w-fit cursor-pointer"
         >
-          <AnimatedLink to="/" content="Jack Marelli"/>
+          <AnimatedLink to="/" content="Jack Marelli" />
         </div>
         <div className="col-span-3 xl:col-span-3 h-full flex justify-start items-center ">
           <img
@@ -41,7 +47,9 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden xl:inline xl:col-span-1 flex justify-end">
-          Contact
+          <span onClick={handleScrollToContact} className="cursor-pointer">
+            Contact
+          </span>
         </div>
         <div className="xl:hidden col-span-3 text-end ">Menu</div>
       </GridLayout>

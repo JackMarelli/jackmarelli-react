@@ -11,30 +11,30 @@ export default function Playground() {
     <BaseLayout>
       <GridLayout>
         <SectionHeader content="Welcome to my Playground" />
-        <p className="col-span-full indent-32 font-serif text-7xl mb-24">
-          <span className="font-symbola text-6xl leading-none">✌</span> This is
+        <p className="col-span-full indent-32 font-serif text-3xl md:text-7xl mb-24">
+          <span className="font-symbola text-3xl md:text-6xl leading-none">✌</span> This is
           a dump of all the micro-projects I challenge myself with when I'm
           inspired, bored or trying to learn something.{" "}
-          <span className="font-symbola text-6xl leading-none">✍</span> Every
+          <span className="font-symbola text-3xl md:text-6xl leading-none">✍</span> Every
           creative has one of these, private or public.
         </p>
-        <div className="col-span-full flex flex-row justify-between items-center mb-6">
-          <div className="flex flex-row gap-4 ">
+        <div className="col-span-full flex flex-col-reverse sm:flex-row justify-between items-start md:items-center mb-4 sm:mb-6 gap-4">
+          <div className="flex flex-row gap-2 sm:gap-4">
             <span
-              className={`cursor-pointer ${viewType === "list" && "text-gray"}`}
+              className={`cursor-pointer w-fit ${viewType === "list" && "text-gray"}`}
               onClick={() => setViewType("grid")}
             >
               Grid View
             </span>
             <span>/</span>
             <span
-              className={`cursor-pointer ${viewType === "grid" && "text-gray"}`}
+              className={`cursor-pointer w-fit ${viewType === "grid" && "text-gray"}`}
               onClick={() => setViewType("list")}
             >
               List View
             </span>
           </div>
-          <span className="w-fit h-fit text-3xl font-simbola leading-none tracking-none">
+          <span className="w-fit h-fit self-end font-simbola tracking-none ">
             (⯎ Personal Favrourite)
           </span>
         </div>

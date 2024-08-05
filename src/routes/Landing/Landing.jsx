@@ -5,7 +5,7 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import GridWork from "../../components/GridWork/GridWork";
 import ExtraSection from "../../components/ExtraSection/ExtraSection";
 import ExtraSectionRow from "../../components/ExtraSectionRow/ExtraSectionRow";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Landing() {
   const detectionZoneRef = useRef();
@@ -117,7 +117,7 @@ export default function Landing() {
         ></div>
       </div>
       <GridLayout cn="items-end">
-        <SectionHeader content="Featured Work" hr={true} />
+        <SectionHeader content="Featured Work" hr={true} hideHrOnMobile={true} />
         <GridWork
           cols={6}
           image={`assets/images/work/uniq/uniq_thumb.png`}

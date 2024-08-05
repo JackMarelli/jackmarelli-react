@@ -5,7 +5,7 @@ const GlobalContext = createContext({
 });
 
 export const GlobalContextProvider = (props) => {
-  const menu_options = ["about", "work", "playground", "contact"];
+  const menu_options = ["about", "work", "playground"];
 
   const getMenuOptionsHandler = () => {
     return menu_options;

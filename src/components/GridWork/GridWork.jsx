@@ -33,7 +33,7 @@ export default function GridWork(props) {
       if (props.image) {
         return (
           <img
-            className="fixed w-96 aspect-square object-cover pointer-events-none z-50"
+            className="fixed w-64 aspect-square object-cover pointer-events-none z-50"
             src={props.image}
             alt="project preview"
             style={{
@@ -51,7 +51,7 @@ export default function GridWork(props) {
             autoPlay={"autoplay"}
             preload="auto"
             loop
-            className="fixed w-96 aspect-square object-cover pointer-events-none z-50"
+            className="fixed w-64 aspect-square object-cover pointer-events-none z-50"
             src={props.video}
             alt="project preview"
             style={{
@@ -70,7 +70,7 @@ export default function GridWork(props) {
   if (props.viewType === "list") {
     return (
       <div
-        className="col-span-full border-t-2 border-dark py-1 grid grid-cols-12 relative cursor-pointer"
+        className="col-span-full hover:border-b-2 border-dark py-1 grid grid-cols-12 relative cursor-pointer"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
