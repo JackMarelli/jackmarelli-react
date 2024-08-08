@@ -4,7 +4,6 @@ import { createPortal } from "react-dom";
 import AnimatedLink from "../AnimatedLink/AnimatedLink";
 
 export default function GridWork(props) {
-  const navigate = useNavigate();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -12,7 +11,8 @@ export default function GridWork(props) {
     if (props.link.startsWith("http")) {
       window.open(props.link, "_blank");
     } else {
-      navigate(props.link);
+      // Use window.location.href to force a full page reload
+      window.location.href = props.link;
     }
   };
 

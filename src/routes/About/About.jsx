@@ -5,8 +5,12 @@ import GridLayout from "../../layouts/GridLayout/GridLayout";
 export default function About() {
   const blinkerRef = useRef();
   const [blinkerState, setBlinkerState] = useState(true);
+  const [randomSymbol, setRandomSymbol] = useState("⊙");
 
   useEffect(() => {
+    const symbols = ["⊙", "⊚", "⭖"];
+    setRandomSymbol(symbols[Math.floor(Math.random() * symbols.length)]);
+
     const blinkerInterval = setInterval(() => {
       setBlinkerState((prevState) => !prevState);
     }, 700);
@@ -18,14 +22,14 @@ export default function About() {
     <BaseLayout>
       <GridLayout>
         <h1 className="col-span-full font-serif text-5xl sm:text-7xl lg:text-9xl mt-24 indent-none sm:indent-32 lg:indent-96 hyphens-auto">
-          Creating pixel perfect interfaces from design do deployment.
+          Crafting pixel perfect interfaces from design do deployment.
         </h1>
         <span className="col-start-1 col-span-2 mt-32">(00)</span>
         <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">About</h2>
-        <p className="col-span-full md:col-span-6 mt-2 md:mt-36">
-          Hello! I'm Giacomo, a class 2003 front-end developer with a rooted
-          design and IT education. <span className="font-symbola">☺</span> Down
-          below some of my values, my story and my work process.
+        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+          Hello! I'm Giacomo, a front-end developer born in 2003 with a solid
+          background in design and IT. <span className="font-symbola">☺</span>{" "}
+          Here are some of my values, my story, and my work process.{" "}
           <span className="font-symbola leading-none ms-2">⤦</span>
         </p>
         <span
@@ -38,19 +42,36 @@ export default function About() {
         </span>
         <span className="col-start-1 col-span-2 mt-32">(01)</span>
         <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">Education</h2>
-        <p className="col-span-full md:col-span-6 mt-2 md:mt-36">
-          Excluding kindergarten, elementary and middle school: I've studied IT
-          and telecomunications, i've enjoyed playing and experimenting with
-          HTML, CSS and JS since i was 14, I have interest in electronics but
-          it's out of my professional field.
+        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+          Excluding kindergarten, elementary, and middle school, I've studied IT
+          and telecommunications
+          <span className="font-symbola leading-none ms-2">⏦</span>. I've
+          enjoyed playing and experimenting with HTML, CSS, and JS since I was
+          14. While I have an interest in electronics, it remains outside my
+          professional field.
+        </p>{" "}
+        <div className="col-start-1 col-span-full md:col-start-6 md:col-span-3 mt-24">
+          <img
+            className="w-full h-auto"
+            src="assets/images/about/0.jpg"
+            alt="Me"
+          />
+        </div>
+        <span className="col-start-1 col-span-2 mt-32">(03)</span>
+        <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">Passion</h2>
+        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+          Besides creating websites and designing interfaces, I'm fascinated by
+          many other topics: sound systems, combat sports, vinyl records
+          <span className="font-symbola leading-none ms-2">{randomSymbol}</span>, cooking,
+          carpentry, neckties, and everything handmade.
         </p>
-        <span className="col-start-1 col-span-2 mt-32">(02)</span>
-        <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">Education</h2>
-        <p className="col-span-full md:col-span-6 mt-2 md:mt-36">
-          Excluding kindergarten, elementary and middle school: I've studied IT
-          and telecomunications, i've enjoyed playing and experimenting with
-          HTML, CSS and JS since i was 14, I have interest in electronics but
-          it's out of my professional field.
+        <span className="col-start-1 col-span-2 mt-32">(04)</span>
+        <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">Approach</h2>
+        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+          My passion for craftsmanship has led me to believe that a developer is
+          also an artisan. This belief has shaped my approach to always
+          prioritize quality and attention to detail, ensuring that every final
+          product is truly worthy of being called an artifact.
         </p>
       </GridLayout>
     </BaseLayout>

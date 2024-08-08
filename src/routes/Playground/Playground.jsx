@@ -34,7 +34,7 @@ export default function Playground() {
               List View
             </span>
           </div>
-          <span className="w-fit h-fit self-end font-simbola tracking-none ">
+          <span className="w  -fit h-fit self-end font-simbola tracking-none ">
             (⯎ Personal Favrourite)
           </span>
         </div>
@@ -43,14 +43,14 @@ export default function Playground() {
           viewType={viewType}
           title="Pac-Mouse"
           image="assets/images/playground/pacmouse_thumb.jpg"
-          link="/playground/pac-mouse"
+          link="/playgroundprojects/pacmouse/"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Nyan-Square"
           image="assets/images/playground/nyansquare_thumb.jpg"
-          link="/playground/nyan-square"
+          link="/playgroundprojects/nyansquare/"
           favourite={true}
         />
         <GridWork

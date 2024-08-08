@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 
 function shuffleString(str) {
   const arr = str.split("");
@@ -8,12 +7,14 @@ function shuffleString(str) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledArr[i], shuffledArr[j]] = [shuffledArr[j], shuffledArr[i]];
   }
-  return arr.map((_, index) => {
-    // Preserve the original capitalization
-    return arr[index] === arr[index].toUpperCase()
-      ? shuffledArr[index].toUpperCase()
-      : shuffledArr[index].toLowerCase();
-  }).join("");
+  return arr
+    .map((_, index) => {
+      // Preserve the original capitalization
+      return arr[index] === arr[index].toUpperCase()
+        ? shuffledArr[index].toUpperCase()
+        : shuffledArr[index].toLowerCase();
+    })
+    .join("");
 }
 
 export default function AnimatedLink({ to, content, capitalize }) {
@@ -47,9 +48,18 @@ export default function AnimatedLink({ to, content, capitalize }) {
     };
   }, [content, isAnimating]);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.location.href = to;
+  };
+
   return (
-    <Link ref={linkRef} to={to} className={`h-fit w-fit leading-tight ${capitalize && "capitalize"}`}>
+    <span
+      ref={linkRef}
+      className={`h-fit w-fit leading-tight cursor-pointer ${capitalize && "capitalize"}`}
+      onClick={handleClick}
+    >
       {content}
-    </Link>
+    </span>
   );
 }
