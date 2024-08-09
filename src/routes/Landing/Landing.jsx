@@ -81,7 +81,7 @@ export default function Landing() {
 
   return (
     <BaseLayout>
-      <div className="relative h-screen overflow-hidden bg-light">
+      <div className="relative h-[94vh] overflow-hidden bg-light">
         <div
           ref={textContainerRef}
           className="absolute inset-0 z-30 pointer-events-none flex items-end bg-light"
@@ -135,7 +135,7 @@ export default function Landing() {
           cols={6}
           video={`assets/videos/misuraemme.mp4`}
           title={`Misuraemme Moodboard Creator`}
-          link="/work/misuraemme"
+          link="https://www.misuraemme.it/en/materials/moodboard-creator"
         />
         <GridWork
           cols={3}
@@ -205,7 +205,7 @@ export default function Landing() {
             bt={false}
           />
           <ExtraSectionRow content="Italian" detail="My native language" />
-          <ExtraSectionRow content="German" detail="Coming soon..." />
+          <ExtraSectionRow content="German (WIP)" detail="Coming soon..." />
         </ExtraSection>
       </GridLayout>
     </BaseLayout>

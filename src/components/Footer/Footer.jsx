@@ -64,7 +64,7 @@ export default function Footer() {
           onClick={handleScrollToTop}
           className="col-start-7 col-span-5 md:col-start-10 md:col-span-3 mt-24 mb-12 md:mt-48 cursor-pointer"
         >
-          Back to top{" "}
+          <AnimatedLink content="Back to top" />
           <span className="font-symbola text-4xl md:text-6xl">☝</span>
         </div>
         <div className="col-span-full text-[8.5vw] leading-none font-serif ">

@@ -39,7 +39,7 @@ export default function Work() {
           cols={6}
           video={`assets/videos/misuraemme.mp4`}
           title={`Misuraemme Moodboard Creator`}
-          link="/work/misuraemme"
+          link="https://www.misuraemme.it/en/materials/moodboard-creator"
         />
         <GridWork
           cols={3}

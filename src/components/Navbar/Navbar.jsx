@@ -47,9 +47,11 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden xl:inline xl:col-span-1 flex justify-end">
-          <span onClick={handleScrollToContact} className="cursor-pointer">
-            Contact
-          </span>
+          <AnimatedLink
+            content="Contact"
+            callBack={handleScrollToContact}
+            className="cursor-pointer"
+          />
         </div>
         <div className="xl:hidden col-span-3 text-end ">Menu</div>
       </GridLayout>

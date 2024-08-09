@@ -75,12 +75,10 @@ export default function GridWork(props) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="col-span-6">
-          <AnimatedLink to={props.link} content={props.title} />
-        </div>
+          <AnimatedLink to={props.link} content={props.title} className="col-span-11 w-full"/>
         {createPortal(renderPreview(), document.getElementById("portal-root"))}
         {props.favourite && (
-          <span className="col-span-4 text-4xl font-simbola leading-none tracking-none flex items-center">
+          <span className="col-span-1 text-4xl font-simbola leading-none tracking-none flex justify-end items-center">
             ⯎
           </span>
         )}

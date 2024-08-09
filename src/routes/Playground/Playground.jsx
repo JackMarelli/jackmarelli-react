@@ -58,65 +58,59 @@ export default function Playground() {
           viewType={viewType}
           title="Two Random Colors text"
           image="assets/images/playground/twocolors_thumb.jpg"
-          link="/playground/two-random-colors-text"
+          link="/playgroundprojects/tworandomcolors"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Text Rounder"
           image="assets/images/playground/textrounder_thumb.jpg"
-          link="/playground/text-rounder"
-        />
-        <GridWork
-          cols={4}
-          viewType={viewType}
-          title="Linked Circles Snake"
-          image="assets/images/playground/linked_circles_snake_thumb.jpg"
-          link="/playground/linked-circles-snake"
+          link="/playgroundprojects/textrounder"
+          favourite={true}
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Detective Cursor"
           image="assets/images/playground/detective_cursor_thumb.jpg"
-          link="/playground/detective-cursor"
+          link="/playgroundprojects/detectivecursor"
           favourite={true}
         />
         <GridWork
           cols={4}
           viewType={viewType}
-          title="Slippy Text"
+          title="Catch"
           image="assets/images/playground/slippy_text_thumb.jpg"
-          link="/playground/slippy-text"
+          link="/playgroundprojects/catch"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Handmade smooth horizontal scroll"
           image="assets/images/playground/handmade_horizontal_smooth_scroll_thumb.jpg"
-          link="/playground/handmade-smooth-horizontal-scroll"
+          link="/playgroundprojects/horizontalsmoothscroll"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="CSS Radar"
           image="assets/images/playground/css_radar_thumb.jpg"
-          link="/playground/css-radar"
+          link="/playgroundprojects/radar"
           favourite={true}
         />
         <GridWork
           cols={4}
           viewType={viewType}
-          title="Rolling Animated Text"
+          title="Roller Text Animation"
           image="assets/images/playground/rolling_text_thumb.jpg"
-          link="/playground/rolling-animated-text"
+          link="/playgroundprojects/roller"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Pills Menu"
           image="assets/images/playground/pills_menu_thumb.jpg"
-          link="/playground/pills-menu"
+          link="/playgroundprojects/pillsmenu"
         />
       </GridLayout>
     </BaseLayout>

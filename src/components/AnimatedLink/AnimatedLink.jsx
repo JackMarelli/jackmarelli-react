@@ -17,7 +17,13 @@ function shuffleString(str) {
     .join("");
 }
 
-export default function AnimatedLink({ to, content, capitalize }) {
+export default function AnimatedLink({
+  to,
+  content,
+  capitalize,
+  className = "",
+  callBack,
+}) {
   const linkRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -50,13 +56,16 @@ export default function AnimatedLink({ to, content, capitalize }) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    window.location.href = to;
+    if (to) window.location.href = to;
+    if (callBack) callBack();
   };
 
   return (
     <span
       ref={linkRef}
-      className={`h-fit w-fit leading-tight cursor-pointer ${capitalize && "capitalize"}`}
+      className={`h-fit w-fit leading-tight cursor-pointer ${
+        capitalize && "capitalize"
+      } ${className}`}
       onClick={handleClick}
     >
       {content}
