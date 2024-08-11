@@ -55,22 +55,15 @@ export default function AnimatedLink({
     };
   }, [content, isAnimating]);
 
-  const handleClick = (e) => {
-    // Prevent default behavior for handling custom navigation
-    e.preventDefault();
-    // Call `callBack` if it exists
-    if (callBack) {
-      callBack();
-    }
-  };
-
   return (
     <Link
       to={to}
       className={`h-fit w-fit leading-tight cursor-pointer ${
         capitalize && "capitalize"
       } ${className}`}
-      onClick={handleClick}
+      onClick={() => {
+        if (callBack) callBack();
+      }}
       ref={linkRef}
     >
       {content}
