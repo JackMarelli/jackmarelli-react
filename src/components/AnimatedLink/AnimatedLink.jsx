@@ -58,13 +58,6 @@ export default function AnimatedLink({
   const handleClick = (e) => {
     // Prevent default behavior for handling custom navigation
     e.preventDefault();
-
-    // Check if `to` prop is provided and navigate using Link
-    if (to) {
-      // Use window.location.href for external links
-      window.location.href = to;
-    }
-
     // Call `callBack` if it exists
     if (callBack) {
       callBack();
