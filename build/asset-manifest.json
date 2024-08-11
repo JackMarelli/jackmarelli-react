@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c0f8087.css",
-    "main.js": "/static/js/main.575e2e64.js",
-    "static/js/453.9b8b6512.chunk.js": "/static/js/453.9b8b6512.chunk.js",
-    "static/media/Symbola.ttf": "/static/media/Symbola.1774a517e74081d2b685.ttf",
-    "static/media/FreeSans.ttf": "/static/media/FreeSans.028215fb03f453e38eed.ttf",
-    "static/media/InstrumentSerif-Italic.ttf": "/static/media/InstrumentSerif-Italic.9e860caa09c61b51b60c.ttf",
-    "static/media/InstrumentSerif-Regular.ttf": "/static/media/InstrumentSerif-Regular.dd726bb91a354547f0d3.ttf",
-    "index.html": "/index.html",
-    "main.2c0f8087.css.map": "/static/css/main.2c0f8087.css.map",
-    "main.575e2e64.js.map": "/static/js/main.575e2e64.js.map",
-    "453.9b8b6512.chunk.js.map": "/static/js/453.9b8b6512.chunk.js.map"
+    "main.css": "/jackmarelli-react/static/css/main.cd537314.css",
+    "main.js": "/jackmarelli-react/static/js/main.e55ff302.js",
+    "static/js/453.9b8b6512.chunk.js": "/jackmarelli-react/static/js/453.9b8b6512.chunk.js",
+    "static/media/Symbola.ttf": "/jackmarelli-react/static/media/Symbola.1774a517e74081d2b685.ttf",
+    "static/media/FreeSans.ttf": "/jackmarelli-react/static/media/FreeSans.028215fb03f453e38eed.ttf",
+    "static/media/InstrumentSerif-Italic.ttf": "/jackmarelli-react/static/media/InstrumentSerif-Italic.9e860caa09c61b51b60c.ttf",
+    "static/media/InstrumentSerif-Regular.ttf": "/jackmarelli-react/static/media/InstrumentSerif-Regular.dd726bb91a354547f0d3.ttf",
+    "index.html": "/jackmarelli-react/index.html",
+    "main.cd537314.css.map": "/jackmarelli-react/static/css/main.cd537314.css.map",
+    "main.e55ff302.js.map": "/jackmarelli-react/static/js/main.e55ff302.js.map",
+    "453.9b8b6512.chunk.js.map": "/jackmarelli-react/static/js/453.9b8b6512.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c0f8087.css",
-    "static/js/main.575e2e64.js"
+    "static/css/main.cd537314.css",
+    "static/js/main.e55ff302.js"
   ]
 }
