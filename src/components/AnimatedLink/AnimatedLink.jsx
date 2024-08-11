@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function shuffleString(str) {
   const arr = str.split("");
@@ -27,6 +27,7 @@ export default function AnimatedLink({
 }) {
   const linkRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const linkElement = linkRef.current;
@@ -55,18 +56,21 @@ export default function AnimatedLink({
     };
   }, [content, isAnimating]);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (to) navigate(to);
+    if (callBack) callBack();
+  };
+
   return (
-    <Link
-      to={to}
+    <span
+      ref={linkRef}
       className={`h-fit w-fit leading-tight cursor-pointer ${
         capitalize && "capitalize"
       } ${className}`}
-      onClick={() => {
-        if (callBack) callBack();
-      }}
-      ref={linkRef}
+      onClick={handleClick}
     >
       {content}
-    </Link>
+    </span>
   );
 }
