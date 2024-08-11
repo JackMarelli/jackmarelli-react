@@ -1,9 +1,4 @@
-//def
-import logo from "./logo.svg";
-import "./App.css";
-
-//router
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 //pages
 import Landing from "./routes/Landing/Landing";
@@ -16,7 +11,7 @@ import Sinapsi from "./routes/Work/Sinapsi/Sinapsi";
 import MusicMatcher from "./routes/Work/MusicMatcher/MusicMatcher";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Landing />,
