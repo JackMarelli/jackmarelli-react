@@ -1,6 +1,11 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+//def
+import logo from "./logo.svg";
+import "./App.css";
 
-// Importing pages
+//router
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+//pages
 import Landing from "./routes/Landing/Landing";
 import About from "./routes/About/About";
 import Work from "./routes/Work/Work";
@@ -11,20 +16,42 @@ import Sinapsi from "./routes/Work/Sinapsi/Sinapsi";
 import MusicMatcher from "./routes/Work/MusicMatcher/MusicMatcher";
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/work/regular" element={<Regular />} />
-        <Route path="/work/sinapsi" element={<Sinapsi />} />
-        <Route path="/work/musicmatcher" element={<MusicMatcher />} />
-        <Route path="/playground" element={<Playground />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Landing />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/work",
+      element: <Work />,
+    },
+    {
+      path: "/work/regular",
+      element: <Regular />,
+    },
+    {
+      path: "/work/sinapsi",
+      element: <Sinapsi />,
+    },
+    {
+      path: "/work/musicmatcher",
+      element: <MusicMatcher />,
+    },
+    {
+      path: "/playground",
+      element: <Playground />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
