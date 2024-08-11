@@ -1,6 +1,6 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
-// pages
+// Importing pages
 import Landing from "./routes/Landing/Landing";
 import About from "./routes/About/About";
 import Work from "./routes/Work/Work";
@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/regular" element={<Regular />} />
