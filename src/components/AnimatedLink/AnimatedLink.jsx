@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 function shuffleString(str) {
   const arr = str.split("");
@@ -55,20 +56,31 @@ export default function AnimatedLink({
   }, [content, isAnimating]);
 
   const handleClick = (e) => {
+    // Prevent default behavior for handling custom navigation
     e.preventDefault();
-    if (to) window.location.href = to;
-    if (callBack) callBack();
+
+    // Check if `to` prop is provided and navigate using Link
+    if (to) {
+      // Use window.location.href for external links
+      window.location.href = to;
+    }
+
+    // Call `callBack` if it exists
+    if (callBack) {
+      callBack();
+    }
   };
 
   return (
-    <span
-      ref={linkRef}
+    <Link
+      to={to}
       className={`h-fit w-fit leading-tight cursor-pointer ${
         capitalize && "capitalize"
       } ${className}`}
       onClick={handleClick}
+      ref={linkRef}
     >
       {content}
-    </span>
+    </Link>
   );
 }
