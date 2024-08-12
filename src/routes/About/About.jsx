@@ -51,7 +51,7 @@ export default function About() {
         <div className="col-start-1 col-span-full md:col-start-6 md:col-span-3 mt-16 md:mt-24">
           <img
             className="w-full h-auto"
-            src="assets/images/about/0.jpg"
+            src="/assets/images/about/0.JPG"
             alt="Me"
           />
         </div>
