@@ -43,7 +43,7 @@ export default function Navbar() {
             <img
               onClick={() => navigate("/")}
               className="h-4 md:h-5 xl:h-6 w-auto cursor-pointer"
-              src="assets/images/icons/logo/logo_black.svg"
+              src="/assets/images/icons/logo/logo_black.svg"
               alt="Jack Marelli Logo"
             />
           </div>
