@@ -13,17 +13,17 @@ export default function Sinapsi() {
         <WorkImage
           cols="full"
           src="/assets/images/work/sinapsi/banner_horizontal_negative.png"
-          cn="aspect-auto h-auto"
+          cn="aspect-none h-auto"
         />
         <WorkImage
           cols="full"
           src="/assets/images/work/sinapsi/banner_logotype.png"
-          cn="aspect-auto h-auto"
+          cn="aspect-none h-auto"
         />
         <WorkImage
           cols="full"
           src="/assets/images/work/sinapsi/banner_logotype_negative.png"
-          cn="aspect-auto h-auto"
+          cn="aspect-none h-auto"
         />
         <WorkParagraph>
           Sinapsi is a newborn electronic components company, i got asked for a
