@@ -58,14 +58,14 @@ export default function Playground() {
           viewType={viewType}
           title="Two Random Colors text"
           image="assets/images/playground/twocolors_thumb.jpg"
-          link="/playgroundprojects/tworandomcolors"
+          link="/playgroundprojects/tworandomcolors/"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Text Rounder"
           image="assets/images/playground/textrounder_thumb.jpg"
-          link="/playgroundprojects/textrounder"
+          link="/playgroundprojects/textrounder/"
           favourite={true}
         />
         <GridWork
@@ -73,7 +73,7 @@ export default function Playground() {
           viewType={viewType}
           title="Detective Cursor"
           image="assets/images/playground/detective_cursor_thumb.jpg"
-          link="/playgroundprojects/detectivecursor"
+          link="/playgroundprojects/detectivecursor/"
           favourite={true}
         />
         <GridWork
@@ -81,21 +81,21 @@ export default function Playground() {
           viewType={viewType}
           title="Catch"
           image="assets/images/playground/slippy_text_thumb.jpg"
-          link="/playgroundprojects/catch"
+          link="/playgroundprojects/catch/"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Handmade smooth horizontal scroll"
           image="assets/images/playground/handmade_horizontal_smooth_scroll_thumb.jpg"
-          link="/playgroundprojects/horizontalsmoothscroll"
+          link="/playgroundprojects/horizontalsmoothscroll/"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="CSS Radar"
           image="assets/images/playground/css_radar_thumb.jpg"
-          link="/playgroundprojects/radar"
+          link="/playgroundprojects/radar/"
           favourite={true}
         />
         <GridWork
@@ -103,14 +103,14 @@ export default function Playground() {
           viewType={viewType}
           title="Roller Text Animation"
           image="assets/images/playground/rolling_text_thumb.jpg"
-          link="/playgroundprojects/roller"
+          link="/playgroundprojects/roller/"
         />
         <GridWork
           cols={4}
           viewType={viewType}
           title="Pills Menu"
           image="assets/images/playground/pills_menu_thumb.jpg"
-          link="/playgroundprojects/pillsmenu"
+          link="/playgroundprojects/pillsmenu/"
         />
       </GridLayout>
     </BaseLayout>
