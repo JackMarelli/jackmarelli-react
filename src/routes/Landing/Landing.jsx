@@ -81,7 +81,7 @@ export default function Landing() {
 
   return (
     <BaseLayout>
-      <div className="relative h-[94vh] overflow-hidden bg-light">
+      <div className="relative h-[94dvh] overflow-hidden bg-light">
         <div
           ref={textContainerRef}
           className="absolute inset-0 z-30 pointer-events-none flex items-end bg-light"
