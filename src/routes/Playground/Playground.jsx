@@ -11,24 +11,33 @@ export default function Playground() {
     <BaseLayout>
       <GridLayout>
         <SectionHeader content="Welcome to my Playground" />
-        <p className="col-span-full indent-32 font-serif text-3xl md:text-7xl mb-24">
-          <span className="font-symbola text-3xl md:text-6xl leading-none">✌</span> This is
-          a dump of all the micro-projects I challenge myself with when I'm
-          inspired, bored or trying to learn something.{" "}
-          <span className="font-symbola text-3xl md:text-6xl leading-none">✍</span> Every
-          creative has one of these, private or public.
+        <p className="col-span-full indent-20 md:indent-36 font-serif text-3xl md:text-7xl mb-24">
+          <span className="font-symbola text-3xl md:text-6xl leading-none">
+            ✌
+          </span>{" "}
+          This is a dump of all the micro-projects I challenge myself with when
+          I'm inspired, bored or trying to learn something.{" "}
+          <span className="font-symbola text-3xl md:text-6xl leading-none">
+            ✍
+          </span>{" "}
+          Every creative has one of these, private or public. Some of them are
+          meant for desktop, the mobile experience could result a bit confusing.
         </p>
         <div className="col-span-full flex flex-col-reverse sm:flex-row justify-between items-start md:items-center mb-4 sm:mb-6 gap-4">
           <div className="flex flex-row gap-2 sm:gap-4">
             <span
-              className={`cursor-pointer w-fit ${viewType === "list" && "text-gray"}`}
+              className={`cursor-pointer w-fit ${
+                viewType === "list" && "text-gray"
+              }`}
               onClick={() => setViewType("grid")}
             >
               Grid View
             </span>
             <span>/</span>
             <span
-              className={`cursor-pointer w-fit ${viewType === "grid" && "text-gray"}`}
+              className={`cursor-pointer w-fit ${
+                viewType === "grid" && "text-gray"
+              }`}
               onClick={() => setViewType("list")}
             >
               List View
@@ -86,7 +95,7 @@ export default function Playground() {
         <GridWork
           cols={4}
           viewType={viewType}
-          title="Handmade smooth horizontal scroll"
+          title="Smooth horizontal scroll"
           image="assets/images/playground/handmade_horizontal_smooth_scroll_thumb.jpg"
           link="/playgroundprojects/horizontalsmoothscroll/"
         />

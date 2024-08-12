@@ -78,7 +78,7 @@ export default function GridWork(props) {
           <AnimatedLink to={props.link} content={props.title} className="col-span-11 w-full"/>
         {createPortal(renderPreview(), document.getElementById("portal-root"))}
         {props.favourite && (
-          <span className="col-span-1 text-4xl font-simbola leading-none tracking-none flex justify-end items-center">
+          <span className="col-span-1 text-xl md:text-4xl font-simbola leading-none tracking-none flex justify-end items-center">
             ⯎
           </span>
         )}
@@ -130,8 +130,8 @@ export default function GridWork(props) {
         </h3>
       </div>
       {props.favourite && (
-        <div className="w-20 h-20 absolute right-8 bottom-8 rounded-full mix-blend-difference bg-light flex justify-center items-center">
-          <span className="w-fit h-fit text-6xl font-simbola leading-none tracking-none">
+        <div className="w-8 md:w-20 h-8 md:h-20 absolute right-3 md:right-8 bottom-3 md:bottom-8 rounded-full mix-blend-difference bg-light flex justify-center items-center">
+          <span className="w-fit h-fit text-xl md:text-6xl font-simbola leading-none tracking-none">
             ⯎
           </span>
         </div>

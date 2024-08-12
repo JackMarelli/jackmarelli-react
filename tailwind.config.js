@@ -15,6 +15,7 @@ module.exports = {
         },
         gray: {
           DEFAULT: "#777777",
+          "333": "333333",
         },
         dark: {
           DEFAULT: "#000000",

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import BaseLayout from "../../layouts/BaseLayout/BaseLayout";
 import GridLayout from "../../layouts/GridLayout/GridLayout";
+import AboutParagraph from "../../components/AboutParagraph/AboutParagraph";
 
 export default function About() {
   const blinkerRef = useRef();
@@ -24,55 +25,48 @@ export default function About() {
         <h1 className="col-span-full font-serif text-5xl sm:text-7xl lg:text-9xl mt-24 indent-none sm:indent-32 lg:indent-96 hyphens-auto">
           Crafting pixel perfect interfaces from design do deployment.
         </h1>
-        <span className="col-start-1 col-span-2 mt-32">(00)</span>
-        <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">About</h2>
-        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+        <AboutParagraph number="00" title="About">
           Hello! I'm Giacomo, a front-end developer born in 2003 with a solid
           background in design and IT. <span className="font-symbola">☺</span>{" "}
           Here are some of my values, my story, and my work process.{" "}
           <span className="font-symbola leading-none ms-2">⤦</span>
-        </p>
+        </AboutParagraph>
         <span
           ref={blinkerRef}
-          className={`col-start-1 md:col-start-6 col-span-full md:col-span-6 mt-40 ${
+          className={`col-start-1 md:col-start-6 col-span-full md:col-span-6 mt-16 md:mt-40 ${
             blinkerState ? "text-light" : "text-dark"
           }`}
         >
           Scroll
         </span>
-        <span className="col-start-1 col-span-2 mt-32">(01)</span>
-        <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">Education</h2>
-        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+        <AboutParagraph number="01" title="Education">
           Excluding kindergarten, elementary, and middle school, I've studied IT
           and telecommunications
           <span className="font-symbola leading-none ms-2">⏦</span>. I've
           enjoyed playing and experimenting with HTML, CSS, and JS since I was
           14. While I have an interest in electronics, it remains outside my
           professional field.
-        </p>{" "}
-        <div className="col-start-1 col-span-full md:col-start-6 md:col-span-3 mt-24">
+        </AboutParagraph>
+
+        <div className="col-start-1 col-span-full md:col-start-6 md:col-span-3 mt-16 md:mt-24">
           <img
             className="w-full h-auto"
             src="assets/images/about/0.jpg"
             alt="Me"
           />
         </div>
-        <span className="col-start-1 col-span-2 mt-32">(03)</span>
-        <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">Passion</h2>
-        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+        <AboutParagraph number="02" title="Passion">
           Besides creating websites and designing interfaces, I'm fascinated by
           many other topics: sound systems, combat sports, vinyl records
-          <span className="font-symbola leading-none ms-2">{randomSymbol}</span>, cooking,
-          carpentry, neckties, and everything handmade.
-        </p>
-        <span className="col-start-1 col-span-2 mt-32">(04)</span>
-        <h2 className="col-span-10 md:col-span-3 mt-32 text-gray">Approach</h2>
-        <p className="col-span-full md:col-span-6 mt-2 md:mt-32">
+          <span className="font-symbola leading-none ms-2">{randomSymbol}</span>
+          , cooking, carpentry, neckties, and everything handmade.
+        </AboutParagraph>
+        <AboutParagraph number="03" title="Approach">
           My passion for craftsmanship has led me to believe that a developer is
           also an artisan. This belief has shaped my approach to always
           prioritize quality and attention to detail, ensuring that every final
-          product is truly worthy of being called an artifact.
-        </p>
+          product is truly worthy of being called a craftwork.
+        </AboutParagraph>
       </GridLayout>
     </BaseLayout>
   );
