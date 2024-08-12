@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Importing pages
 import Landing from "./routes/Landing/Landing";
@@ -10,21 +10,20 @@ import Regular from "./routes/Work/Regular/Regular";
 import Sinapsi from "./routes/Work/Sinapsi/Sinapsi";
 import MusicMatcher from "./routes/Work/MusicMatcher/MusicMatcher";
 
+// Define routes
+const router = createBrowserRouter([
+  { path: "/", element: <Landing /> },
+  { path: "/about", element: <About /> },
+  { path: "/work", element: <Work /> },
+  { path: "/work/regular", element: <Regular /> },
+  { path: "/work/sinapsi", element: <Sinapsi /> },
+  { path: "/work/musicmatcher", element: <MusicMatcher /> },
+  { path: "/playground", element: <Playground /> },
+  { path: "/contact", element: <Contact /> },
+]);
+
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/work/regular" element={<Regular />} />
-        <Route path="/work/sinapsi" element={<Sinapsi />} />
-        <Route path="/work/musicmatcher" element={<MusicMatcher />} />
-        <Route path="/playground" element={<Playground />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
