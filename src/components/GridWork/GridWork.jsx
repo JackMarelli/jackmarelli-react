@@ -75,7 +75,11 @@ export default function GridWork(props) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-          <AnimatedLink to={props.link} content={props.title} className="col-span-11 w-full"/>
+        <AnimatedLink
+          to={props.link}
+          content={props.title}
+          className="col-span-11 w-full"
+        />
         {createPortal(renderPreview(), document.getElementById("portal-root"))}
         {props.favourite && (
           <span className="col-span-1 text-xl md:text-4xl font-simbola leading-none tracking-none flex justify-end items-center">
@@ -120,14 +124,19 @@ export default function GridWork(props) {
           />
         )}
       </div>
-      <div className="absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-dark/75 opacity-0 hover:opacity-100 pointer-events-none md:pointer-events-auto p-8">
+      <div className="absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-light opacity-0 hover:opacity-100 hover:border-2 border-dark pointer-events-none md:pointer-events-auto p-8 flex flex-col gap-2">
         <h3
           className={`font-serif ${
             props.cols < 4 ? "text-4xl lg:text-5xl" : "text-6xl"
-          } text-light text-center`}
+          } text-dark text-center`}
         >
           {props.title}
         </h3>
+        <h4
+          className={`text-gray text-center ${props.cols < 4 && "text-2xl"}`}
+        >
+          {props.exp}
+        </h4>
       </div>
       {props.favourite && (
         <div className="w-8 md:w-20 h-8 md:h-20 absolute right-3 md:right-8 bottom-3 md:bottom-8 rounded-full mix-blend-difference bg-light flex justify-center items-center">
