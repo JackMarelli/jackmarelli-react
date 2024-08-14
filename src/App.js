@@ -9,6 +9,8 @@ import Contact from "./routes/Contact/Contact";
 import Regular from "./routes/Work/Regular/Regular";
 import Sinapsi from "./routes/Work/Sinapsi/Sinapsi";
 import MusicMatcher from "./routes/Work/MusicMatcher/MusicMatcher";
+import _50SfumatureDiPinotNoir from "./routes/Work/_50SfumatureDiPinotNoir/_50SfumatureDiPinotNoir";
+import MadeInBergamo from "./routes/Work/MadeInBergamo/MadeInBergamo";
 
 // Define routes
 const router = createBrowserRouter([
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
   { path: "/work/regular", element: <Regular /> },
   { path: "/work/sinapsi", element: <Sinapsi /> },
   { path: "/work/musicmatcher", element: <MusicMatcher /> },
+  {
+    path: "/work/50sfumaturedipinotnoir",
+    element: <_50SfumatureDiPinotNoir />,
+  },
+  {
+    path: "/work/madeinbergamo",
+    element: <MadeInBergamo />,
+  },
   { path: "/playground", element: <Playground /> },
   { path: "/contact", element: <Contact /> },
 ]);

@@ -35,7 +35,12 @@ export default function Work() {
           cn="self-start"
         />
         <GridWork
-          start={4}
+          cols={3}
+          image={`assets/images/work/regular/regular_thumb.png`}
+          title={`Regular Magazine`}
+          link="/work/regular"
+        />
+        <GridWork
           cols={6}
           video={`assets/videos/misuraemme.mp4`}
           title={`Misuraemme Moodboard Creator`}
@@ -43,9 +48,10 @@ export default function Work() {
         />
         <GridWork
           cols={3}
-          image={`assets/images/work/regular/regular_thumb.png`}
-          title={`Regular Magazine`}
-          link="/work/regular"
+          image={`assets/images/work/_50sfumaturedipinotnoir/square_negative.jpg`}
+          title={`50 Sfumature di Pinot Noir`}
+          link="/work/50sfumaturedipinotnoir"
+          cn="self-start"
         />
         <GridWork
           cols={3}
@@ -55,6 +61,12 @@ export default function Work() {
         />
         <GridWork
           start={7}
+          cols={3}
+          image={`assets/images/work/madeinbergamo/square.jpg`}
+          title={`Made In Bergamo`}
+          link="/work/madeinbergamo"
+        />
+        <GridWork
           cols={3}
           image={`assets/images/work/musicmatcher/mm_thumb.webp`}
           title={`Music Matcher`}
