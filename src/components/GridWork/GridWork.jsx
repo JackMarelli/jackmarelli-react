@@ -124,11 +124,11 @@ export default function GridWork(props) {
           />
         )}
       </div>
-      <div className="absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-light opacity-0 hover:opacity-100 hover:border-2 border-dark pointer-events-none md:pointer-events-auto p-8 flex flex-col gap-2">
+      <div className="absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-dark bg-opacity-95 opacity-0 hover:opacity-100 pointer-events-none md:pointer-events-auto p-8 flex flex-col gap-2">
         <h3
           className={`font-serif ${
             props.cols < 4 ? "text-4xl lg:text-5xl" : "text-6xl"
-          } text-dark text-center`}
+          } text-light text-center`}
         >
           {props.title}
         </h3>
