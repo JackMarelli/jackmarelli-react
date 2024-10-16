@@ -39,7 +39,7 @@ export default function Navbar() {
           >
             <AnimatedLink to="/" content="Jack Marelli" />
           </div>
-          <div className="col-span-3 xl:col-span-3 h-full flex justify-start items-center">
+          <div className="col-span-3 h-full flex justify-start items-center">
             <img
               onClick={() => navigate("/")}
               className="h-4 md:h-5 xl:h-6 w-auto cursor-pointer"
@@ -47,7 +47,7 @@ export default function Navbar() {
               alt="Jack Marelli Logo"
             />
           </div>
-          <div className="hidden xl:inline xl:col-start-7 col-span-5 flex flex-row justify-start items-center">
+          <div className="hidden xl:inline col-span-4 flex flex-row justify-start items-center">
             {menuOptions.map((option, index) => (
               <span key={option}>
                 <AnimatedLink
@@ -61,7 +61,7 @@ export default function Navbar() {
               </span>
             ))}
           </div>
-          <div className="hidden xl:inline xl:col-span-1 flex justify-end">
+          <div className="hidden xl:inline col-span-2 text-end">
             <AnimatedLink
               content="Contact"
               callBack={handleScrollToContact}

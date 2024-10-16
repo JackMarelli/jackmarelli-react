@@ -117,18 +117,22 @@ export default function Landing() {
         ></div>
       </div>
       <GridLayout cn="items-end">
-        <SectionHeader content="Featured Work" hr={true} hideHrOnMobile={true} />
+        <SectionHeader
+          content="Featured Work"
+          hr={true}
+          hideHrOnMobile={true}
+        />
         <GridWork
           cols={6}
-          image={`assets/images/work/uniq/uniq_thumb.png`}
-          title={`Uniq Bar and Bistrot`}
-          link="https://www.behance.net/gallery/169770509/UNIQ-Bar-Restourant-Identity-Concept"
+          video={`assets/videos/domu/domu_cover_square.mp4`}
+          title={`Domu`}
+          link="/work/domu"
         />
         <GridWork
           cols={3}
-          video={`assets/videos/logo_spin.mp4`}
-          title={`Jack Marelli`}
-          link="https://pitch.com/public/a11bd9a9-6432-4e14-8989-5f6288e39d51/4cb5ad97-18fa-47b2-ae99-d8e90e164b47"
+          image={`assets/images/work/regular/regular_thumb.png`}
+          title={`Regular Magazine`}
+          link="/work/regular"
         />
         <GridWork
           start={4}
@@ -139,9 +143,9 @@ export default function Landing() {
         />
         <GridWork
           cols={3}
-          image={`assets/images/work/regular/regular_thumb.png`}
-          title={`Regular Magazine`}
-          link="/work/regular"
+          video={`assets/videos/logo_spin.mp4`}
+          title={`Jack Marelli`}
+          link="https://pitch.com/public/a11bd9a9-6432-4e14-8989-5f6288e39d51/4cb5ad97-18fa-47b2-ae99-d8e90e164b47"
         />
         <GridWork
           cols={6}
@@ -149,9 +153,14 @@ export default function Landing() {
           title={`Sinapsi`}
           link="/work/sinapsi"
         />
-        <div onClick={() => navigate("/work")} className="col-span-12 md:col-span-3 h-fit md:aspect-square border md:border-2 border-dark flex flex-col justify-center items-center cursor-pointer mb-4 md:mb-8 pt-2">
+        <div
+          onClick={() => navigate("/work")}
+          className="col-span-12 md:col-span-3 h-fit md:aspect-square border md:border-2 border-dark flex flex-col justify-center items-center cursor-pointer mb-4 md:mb-8 pt-2"
+        >
           <h2 className="font-serif text-3xl md:text-7xl">All Work</h2>
-          <span className="font-symbola text-4xl md:text-7xl -mt-4 md:-mt-8">⇁</span>
+          <span className="font-symbola text-4xl md:text-7xl -mt-4 md:-mt-8">
+            ⇁
+          </span>
         </div>
         <p className="col-start-1 col-span-full font-serif text-3xl md:text-7xl">
           I am all for the details: visual hierarchies, communication throught

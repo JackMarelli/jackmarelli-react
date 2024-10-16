@@ -21,12 +21,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -41,5 +35,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }  
+  }
 }
