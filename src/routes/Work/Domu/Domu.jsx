@@ -8,7 +8,7 @@ export default function Domu() {
     <BaseLayout>
       <WorkLayout
         title="Domu"
-        desc="Front-end desig and development for a condo management app and website"
+        desc="Front-end design and development for a condo management app and website"
       >
         <WorkImage
           cols="full"
