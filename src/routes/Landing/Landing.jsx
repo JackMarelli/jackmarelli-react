@@ -188,8 +188,8 @@ export default function Landing() {
             detail="Images color and light correction"
           />
           <ExtraSectionRow
-            content="Indesign"
-            detail="Refined document pagination"
+            content="MaxMSP"
+            detail="Nodes Programming"
           />
         </ExtraSection>
         <ExtraSection title="Technologies">
