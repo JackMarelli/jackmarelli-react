@@ -21,14 +21,14 @@ export default function Work() {
           title={`Jack Marelli`}
           exp="Identity"
           link="https://pitch.com/public/a11bd9a9-6432-4e14-8989-5f6288e39d51/4cb5ad97-18fa-47b2-ae99-d8e90e164b47"
-          />
+        />
         <GridWork
           cols={3}
           image={`assets/images/work/uniq/uniq_thumb.png`}
           title={`Uniq Bar and Bistrot`}
           exp="Identity"
           link="https://www.behance.net/gallery/169770509/UNIQ-Bar-Restourant-Identity-Concept"
-          />
+        />
         <GridWork
           cols={3}
           image={`assets/images/work/vev/vev_thumb.png`}
@@ -36,21 +36,21 @@ export default function Work() {
           exp="Website"
           link="http://www.vev-cleangarden.it/"
           cn="self-start"
-          />
+        />
         <GridWork
           cols={3}
           image={`assets/images/work/regular/regular_thumb.png`}
           title={`Regular Magazine`}
           exp="Magazine"
           link="/work/regular"
-          />
+        />
         <GridWork
           cols={6}
           video={`assets/videos/misuraemme.mp4`}
           title={`Misuraemme Moodboard Creator`}
           exp="Webpage"
           link="https://www.misuraemme.it/en/materials/moodboard-creator"
-          />
+        />
         <GridWork
           cols={3}
           image={`assets/images/work/_50sfumaturedipinotnoir/square_negative.jpg`}
@@ -58,14 +58,14 @@ export default function Work() {
           exp="Logo"
           link="/work/50sfumaturedipinotnoir"
           cn="self-start"
-          />
+        />
         <GridWork
           cols={3}
           image={`assets/images/work/sinapsi/propic_negative.png`}
           title={`Sinapsi`}
           exp="Logo"
           link="/work/sinapsi"
-          />
+        />
         <GridWork
           start={7}
           cols={3}
@@ -73,14 +73,23 @@ export default function Work() {
           title={`Made In Bergamo`}
           exp="Website"
           link="/work/madeinbergamo"
-          />
+        />
         <GridWork
+          start={4}
           cols={3}
           image={`assets/images/work/musicmatcher/mm_thumb.webp`}
           title={`Music Matcher`}
           exp="App"
           link="/work/musicmatcher"
-          />
+        />
+        <GridWork
+          start="10"
+          cols={3}
+          image={`assets/images/work/riflessioniprogrammate/flyer.png`}
+          title={`Riflessioni Programmate`}
+          exp="Interactive"
+          link="/work/riflessioniprogrammate"
+        />
         <p className="col-start-1 col-span-full font-serif text-3xl md:text-7xl">
           If you wish to start a project with me in order to enhance your
           brand's identity and visibility, online and offline, drop a line to my

@@ -12,6 +12,7 @@ import MusicMatcher from "./routes/Work/MusicMatcher/MusicMatcher";
 import _50SfumatureDiPinotNoir from "./routes/Work/_50SfumatureDiPinotNoir/_50SfumatureDiPinotNoir";
 import MadeInBergamo from "./routes/Work/MadeInBergamo/MadeInBergamo";
 import Domu from "./routes/Work/Domu/Domu";
+import RiflessioniProgrammate from "./routes/Work/RiflessioniProgrammate/RiflessioniProgrammate";
 
 // Define routes
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/work/domu",
     element: <Domu />,
+  },
+  {
+    path: "/work/riflessioniprogrammate",
+    element: <RiflessioniProgrammate />,
   },
   { path: "/playground", element: <Playground /> },
   { path: "/contact", element: <Contact /> },
