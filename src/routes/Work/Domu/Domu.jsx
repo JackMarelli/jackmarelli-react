@@ -2,6 +2,7 @@ import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
+import WorkVideo from "../../../components/WorkVideo/WorkVideo";
 
 export default function Domu() {
   return (
@@ -10,8 +11,9 @@ export default function Domu() {
         title="Domu"
         desc="Front-end design and development for a condo management app and website"
       >
+        <WorkVideo cols="full" src="/assets/videos/domu/grid_anim_1.mp4" />
         <WorkImage
-          cols="full"
+          cols="6"
           src="/assets/images/work/domu/domuCover2.png"
           aspect="square"
         />
@@ -20,7 +22,6 @@ export default function Domu() {
           src="/assets/images/work/domu/domu4.png"
           aspect="none"
         />
-        <WorkImage cols="6" src="/assets/images/work/domu/domu3.png" />
         <WorkParagraph>
           Domu is a modern, all-in-one platform designed to simplify condominium
           living. Developed by a team of three full-stack developers, including
@@ -36,8 +37,8 @@ export default function Domu() {
           cols="full"
           src="/assets/images/work/domu/branding_post.jpg"
         />
-        <WorkImage cols="full" src="/assets/images/work/domu/domu2.png" />
         <WorkImage cols="6" src="/assets/images/work/domu/domu5.png" />
+        <WorkImage cols="6" src="/assets/images/work/domu/domu2.png" />
         <WorkParagraph>
           The app’s intuitive design prioritizes user experience, ensuring
           smooth navigation across both mobile and web platforms. Every aspect
