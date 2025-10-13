@@ -1,6 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Importing pages
+// layouts
+import BaseLayout from "./layouts/BaseLayout/BaseLayout";
+
+// pages
 import Landing from "./routes/Landing/Landing";
 import About from "./routes/About/About";
 import Work from "./routes/Work/Work";
@@ -14,36 +17,26 @@ import MadeInBergamo from "./routes/Work/MadeInBergamo/MadeInBergamo";
 import Domu from "./routes/Work/Domu/Domu";
 import RiflessioniProgrammate from "./routes/Work/RiflessioniProgrammate/RiflessioniProgrammate";
 
-// Define routes
 const router = createBrowserRouter([
-  { path: "/", element: <Landing /> },
-  { path: "/about", element: <About /> },
-  { path: "/work", element: <Work /> },
-  { path: "/work/regular", element: <Regular /> },
-  { path: "/work/sinapsi", element: <Sinapsi /> },
-  { path: "/work/musicmatcher", element: <MusicMatcher /> },
   {
-    path: "/work/50sfumaturedipinotnoir",
-    element: <_50SfumatureDiPinotNoir />,
+    element: <BaseLayout />,   // <-- persistent wrapper with the Loader
+    children: [
+      { path: "/", element: <Landing /> },
+      { path: "/about", element: <About /> },
+      { path: "/work", element: <Work /> },
+      { path: "/work/regular", element: <Regular /> },
+      { path: "/work/sinapsi", element: <Sinapsi /> },
+      { path: "/work/musicmatcher", element: <MusicMatcher /> },
+      { path: "/work/50sfumaturedipinotnoir", element: <_50SfumatureDiPinotNoir /> },
+      { path: "/work/madeinbergamo", element: <MadeInBergamo /> },
+      { path: "/work/domu", element: <Domu /> },
+      { path: "/work/riflessioniprogrammate", element: <RiflessioniProgrammate /> },
+      { path: "/playground", element: <Playground /> },
+      { path: "/contact", element: <Contact /> },
+    ],
   },
-  {
-    path: "/work/madeinbergamo",
-    element: <MadeInBergamo />,
-  },
-  {
-    path: "/work/domu",
-    element: <Domu />,
-  },
-  {
-    path: "/work/riflessioniprogrammate",
-    element: <RiflessioniProgrammate />,
-  },
-  { path: "/playground", element: <Playground /> },
-  { path: "/contact", element: <Contact /> },
 ]);
 
-function App() {
+export default function App() {
   return <RouterProvider router={router} />;
 }
-
-export default App;

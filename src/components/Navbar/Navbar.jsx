@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav
         className={`absolute top-0 w-full py-3 ${
           isMenuOpen ? "bg-gray-100" : "bg-light"
-        } z-50 sticky top-0`}
+        } z-50 sticky top-0 md:text-2xl`}
       >
         <GridLayout>
           <div

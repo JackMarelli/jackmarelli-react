@@ -8,7 +8,7 @@ export default function Playground() {
   const [viewType, setViewType] = useState("grid");
 
   return (
-    <BaseLayout>
+    <>
       <GridLayout>
         <SectionHeader content="Welcome to my Playground" />
         <p className="col-span-full indent-20 md:indent-36 font-serif text-3xl md:text-7xl mb-24">
@@ -122,6 +122,6 @@ export default function Playground() {
           link="/playgroundprojects/pillsmenu/"
         />
       </GridLayout>
-    </BaseLayout>
+    </>
   );
 }

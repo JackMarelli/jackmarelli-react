@@ -20,7 +20,7 @@ export default function About() {
   }, []);
 
   return (
-    <BaseLayout>
+    <>
       <GridLayout>
         <h1 className="col-span-full font-serif text-5xl sm:text-7xl lg:text-9xl mt-24 indent-none sm:indent-32 lg:indent-96 hyphens-auto">
           Crafting pixel perfect interfaces from design do deployment.
@@ -68,6 +68,6 @@ export default function About() {
           product is truly worthy of being called a craftwork.
         </AboutParagraph>
       </GridLayout>
-    </BaseLayout>
+    </>
   );
 }

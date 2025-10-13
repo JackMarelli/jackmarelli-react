@@ -5,7 +5,7 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 export default function Work() {
   return (
-    <BaseLayout>
+    <>
       <GridLayout cn="items-end">
         <h1 className="col-span-full text-7xl lg:text-[16rem] font-serif mt-24 lg:mt-40">
           All projects
@@ -96,6 +96,6 @@ export default function Work() {
           mail or contact me throught any of my socials.
         </p>
       </GridLayout>
-    </BaseLayout>
+    </>
   );
 }

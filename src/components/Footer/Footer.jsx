@@ -19,7 +19,7 @@ export default function Footer() {
   }, [ctx]);
 
   return (
-    <footer className="mt-24">
+    <footer className="mt-24 text-base/5 md:text-2xl">
       <GridLayout>
         <FooterSection title="Menu">
           {menuOptions.map((option, index) => (
@@ -31,9 +31,12 @@ export default function Footer() {
             />
           ))}
         </FooterSection>
-        <FooterSection title="Language">
-          <AnimatedLink to={`/`} content={"English"} capitalize={true} />
-          <AnimatedLink to={`/`} content={"Italian"} capitalize={true} />
+        <FooterSection title="Associate">
+          <AnimatedLink
+            to={`https://www.quantum-studio.it/`}
+            content={"Quantum Studio"}
+            capitalize={true}
+          />
         </FooterSection>
         <FooterSection title="Social">
           <AnimatedLink
@@ -47,18 +50,15 @@ export default function Footer() {
             capitalize={true}
           />
           <AnimatedLink
-            to="https://www.behance.net/giacomomarelli1"
-            content="Behance"
-            capitalize={true}
-          />
-          <AnimatedLink
             to="https://github.com/JackMarelli"
             content="GitHub"
             capitalize={true}
           />
         </FooterSection>
-        <FooterSection title="Location">
-          <h3>Milan, Italy</h3>
+        <FooterSection title="Locations">
+          <h3>Milan (MI), Italy</h3>
+          <h3>Gallarate (VA), Italy</h3>
+          <h3>Como (CO), Italy</h3>
         </FooterSection>
         <div
           onClick={handleScrollToTop}
@@ -68,7 +68,7 @@ export default function Footer() {
           <span className="font-symbola text-4xl md:text-6xl">☝</span>
         </div>
         <div className="col-span-full text-[8.5vw] leading-none font-serif ">
-          Hire me at{" "}
+          Reach out{" "}
           <span className="font-symbola">
             ⤵ <br />
           </span>
@@ -80,33 +80,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-/*
-
-<div class="inline-contain section-title fs-lg">Links</div>
-      <div class="inline-contain footer-links">
-        <div class="footer-list">
-          <div class="fs-lg">Cantù, Italy</div>
-        </div>
-        <div class="fs-lg footer-list">
-          <a href="https://www.linkedin.com/in/giacomo-marelli-6a8866230/">Linkedin</a>
-          <a href="https://github.com/JackMarelli">Github</a>
-          <a href="https://www.behance.net/giacomomarelli1">Behance</a>
-        </div>
-        <div class="fs-lg footer-list">
-          <a href="https://www.instagram.com/jack.marelli/">Instagram</a>
-          <a href="https://twitter.com/jackmareIIi">X</a>
-        </div>
-        <div class="fs-lg footer-list">
-          <a href="https://www.jackmarelli.com/">Home</a>
-          <a href="https://www.jackmarelli.com/projects/">Works</a>
-          <a href="https://www.jackmarelli.com/playground/">Playground</a>
-          <a href="mailto:marelligiacomo@gmail.com">Contact</a>
-          <a id="backToTopBtn" href="#">Back to top <span class="symbola">☝</span></a>
-        </div>
-      </div>
-      <div class="inline-contain display fs-2xl footer-mail">Hire me at <span class="symbola">⤵</span> <br><a class="display-italic"
-          href="mailto:marelligiacomo@gmail.com">marelligiacomo@gmail.com</a>
-      </div>
-      
-      */
