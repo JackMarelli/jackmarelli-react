@@ -1,4 +1,3 @@
-import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
@@ -6,7 +5,7 @@ import AnimatedLink from "../../../components/AnimatedLink/AnimatedLink";
 
 export default function Regular() {
   return (
-    <BaseLayout>
+    <>
       <WorkLayout
         title="Regular Magazine"
         desc="Brand Identity and issue '0' creation for a typograpy focused fanzine."
@@ -50,6 +49,6 @@ export default function Regular() {
         <WorkImage cols="full" src="/assets/images/work/regular/regularCover.jpg" />
         <WorkImage cols="full" src="/assets/images/work/regular/regularCoverVertical.png" />
       </WorkLayout>
-    </BaseLayout>
+    </>
   );
 }

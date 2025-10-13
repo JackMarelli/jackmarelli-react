@@ -1,4 +1,3 @@
-import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
@@ -6,7 +5,7 @@ import WorkVideo from "../../../components/WorkVideo/WorkVideo";
 
 export default function Domu() {
   return (
-    <BaseLayout>
+    <>
       <WorkLayout
         title="Domu"
         desc="Front-end design and development for a condo management app and website"
@@ -53,6 +52,6 @@ export default function Domu() {
           cn="aspect-auto h-auto"
         />
       </WorkLayout>
-    </BaseLayout>
+    </>
   );
 }

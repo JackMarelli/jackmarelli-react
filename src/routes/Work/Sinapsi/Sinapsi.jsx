@@ -1,11 +1,10 @@
-import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
 
 export default function Sinapsi() {
   return (
-    <BaseLayout>
+    <>
       <WorkLayout
         title="Sinapsi"
         desc="Logo design for a newborn tech company."
@@ -49,6 +48,6 @@ export default function Sinapsi() {
           cn="aspect-auto h-auto"
         />
       </WorkLayout>
-    </BaseLayout>
+    </>
   );
 }

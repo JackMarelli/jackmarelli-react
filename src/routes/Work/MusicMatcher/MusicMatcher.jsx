@@ -1,4 +1,3 @@
-import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
@@ -6,7 +5,7 @@ import AnimatedLink from "../../../components/AnimatedLink/AnimatedLink";
 
 export default function MusicMatcher() {
   return (
-    <BaseLayout>
+    <>
       <WorkLayout
         title="Music Matcher"
         desc="UX/UI concept for a collective playlist creation app."
@@ -30,13 +29,10 @@ export default function MusicMatcher() {
         <WorkImage cols="6" src="/assets/images/work/musicmatcher/4.jpeg" />
         <WorkImage cols="6" src="/assets/images/work/musicmatcher/1.jpeg" />
         <WorkParagraph>
-          <AnimatedLink
-            to="https://www.albyeah.com/"
-            content="Albyeah"
-          />{" "}
-          ⍈ and myself also developed fresh new visual identity that would match
-          with the purpose of the app. The new mood embraces a neo-brutalist
-          core and makes the experience more playful and less boring.
+          <AnimatedLink to="https://www.albyeah.com/" content="Albyeah" /> ⍈ and
+          myself also developed fresh new visual identity that would match with
+          the purpose of the app. The new mood embraces a neo-brutalist core and
+          makes the experience more playful and less boring.
           <br />
           <br />
           One cool new feature is in the last step of the survey, which
@@ -51,6 +47,6 @@ export default function MusicMatcher() {
         />
         <WorkImage cols="full" src="/assets/images/work/musicmatcher/8.jpeg" />
       </WorkLayout>
-    </BaseLayout>
+    </>
   );
 }

@@ -1,4 +1,3 @@
-import BaseLayout from "../../layouts/BaseLayout/BaseLayout";
 import GridLayout from "../../layouts/GridLayout/GridLayout";
 import GridWork from "../../components/GridWork/GridWork";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";

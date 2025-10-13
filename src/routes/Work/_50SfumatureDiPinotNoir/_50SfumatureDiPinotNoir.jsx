@@ -1,4 +1,3 @@
-import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
@@ -6,7 +5,7 @@ import AnimatedLink from "../../../components/AnimatedLink/AnimatedLink";
 
 export default function _50SfumatureDiPinotNoir() {
   return (
-    <BaseLayout>
+    <>
       <WorkLayout
         title="50 Sfumature di Pinot Noir"
         desc="Logo Design for a wine tasting event."
@@ -76,6 +75,6 @@ export default function _50SfumatureDiPinotNoir() {
           cn="aspect-auto h-auto"
         />
       </WorkLayout>
-    </BaseLayout>
+    </>
   );
 }

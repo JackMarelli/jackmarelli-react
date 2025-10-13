@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import BaseLayout from "../../layouts/BaseLayout/BaseLayout";
 import GridLayout from "../../layouts/GridLayout/GridLayout";
 import AboutParagraph from "../../components/AboutParagraph/AboutParagraph";
 

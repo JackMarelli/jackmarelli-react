@@ -1,11 +1,10 @@
-import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
 
 export default function MadeInBergamo() {
   return (
-    <BaseLayout>
+    <>
       <WorkLayout
         title="Made in Bergamo"
         desc="Website design and development for a research thesis."
@@ -49,6 +48,6 @@ export default function MadeInBergamo() {
           cn="aspect-auto h-auto"
         />
       </WorkLayout>
-    </BaseLayout>
+    </>
   );
 }

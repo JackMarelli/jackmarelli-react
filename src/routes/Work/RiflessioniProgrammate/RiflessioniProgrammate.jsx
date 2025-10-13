@@ -1,4 +1,3 @@
-import BaseLayout from "../../../layouts/BaseLayout/BaseLayout";
 import WorkLayout from "../../../layouts/WorkLayout/WorkLayout";
 import WorkImage from "../../../components/WorkImage/WorkImage";
 import WorkParagraph from "../../../components/WorkParagraph/WorkParagraph";
@@ -6,7 +5,7 @@ import AnimatedLink from "../../../components/AnimatedLink/AnimatedLink";
 
 export default function Regular() {
   return (
-    <BaseLayout>
+    <>
       <WorkLayout
         title="Riflessioni Programmate"
         desc="Interactive Installation for IED Milano   "
@@ -58,6 +57,6 @@ export default function Regular() {
           src="/assets/images/work/riflessioniprogrammate/IMG-20250204-WA0007.jpg"
         />
       </WorkLayout>
-    </BaseLayout>
+    </>
   );
 }
