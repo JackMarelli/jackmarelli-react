@@ -98,42 +98,22 @@ export default function Navbar() {
   }, []);
 
   const mobileOptionStyle = useMemo(() => {
-    if (!orientation.supported) {
-      return { color: "#111111" };
-    }
-
     const gamma = Math.max(-45, Math.min(45, orientation.gamma));
-    const beta = Math.max(-45, Math.min(45, orientation.beta));
     const normalizedGamma = gamma / 45; // -1 to 1
-    const normalizedBeta = beta / 45; // -1 to 1
     const angle = 45 + normalizedGamma * 35;
-    const magentaIntensity = Math.min(
-      1,
-      Math.abs(normalizedGamma) * 0.8 + Math.abs(normalizedBeta) * 0.4
-    );
-    const darkness = Math.min(0.95, 0.25 + Math.abs(normalizedBeta) * 0.5);
-    const gradient = `linear-gradient(${angle}deg, rgba(255, 0, 153, ${
-      0.15 + magentaIntensity * 0.6
-    }) 0%, rgba(20, 20, 20, ${darkness}) 40%, rgba(255, 255, 255, ${
-      0.08 + magentaIntensity * 0.2
-    }) 65%, rgba(255, 0, 153, ${
-      0.12 + magentaIntensity * 0.35
-    }) 100%)`;
-    const glowStrength = Math.min(
-      1,
-      Math.abs(normalizedGamma) + Math.abs(normalizedBeta)
-    );
+    const hasGyro = orientation.supported;
+
+    const gradient = `linear-gradient(${angle}deg,
+      rgba(12, 12, 12, ${hasGyro ? 0.95 : 0.85}) 0%,
+      rgba(255, 0, 153, ${hasGyro ? 0.85 : 0.7}) 60%,
+      rgba(12, 12, 12, ${hasGyro ? 0.9 : 0.8}) 100%)`;
 
     return {
       color: "transparent",
       backgroundImage: gradient,
       WebkitBackgroundClip: "text",
       backgroundClip: "text",
-      textShadow: `0 0 ${8 + glowStrength * 10}px rgba(255, 0, 153, ${
-        0.2 + 0.4 * glowStrength
-      })`,
-      transition:
-        "background-image 120ms linear, text-shadow 150ms linear, color 200ms ease",
+      transition: "background-image 120ms linear, color 200ms ease",
     };
   }, [orientation]);
 
