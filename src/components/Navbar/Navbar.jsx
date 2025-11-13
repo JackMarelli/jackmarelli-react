@@ -12,6 +12,8 @@ export default function Navbar() {
   const navigate = useNavigate();
   const lenis = useLenis();
 
+  const ENABLE_GYRO_SHINE = false;
+
   const [orientation, setOrientation] = useState({
     beta: 0,
     gamma: 0,
@@ -19,6 +21,10 @@ export default function Navbar() {
   });
 
   useEffect(() => {
+    if (!ENABLE_GYRO_SHINE) {
+      return;
+    }
+
     if (typeof window === "undefined") {
       return;
     }
@@ -95,9 +101,13 @@ export default function Navbar() {
         );
       }
     };
-  }, []);
+  }, [ENABLE_GYRO_SHINE]);
 
   const mobileOptionStyle = useMemo(() => {
+    if (!ENABLE_GYRO_SHINE) {
+      return undefined;
+    }
+
     const gamma = Math.max(-45, Math.min(45, orientation.gamma));
     const normalizedGamma = gamma / 45; // -1 to 1
     const angle = 45 + normalizedGamma * 35;
@@ -115,7 +125,7 @@ export default function Navbar() {
       backgroundClip: "text",
       transition: "background-image 120ms linear, color 200ms ease",
     };
-  }, [orientation]);
+  }, [ENABLE_GYRO_SHINE, orientation]);
 
   const MobileMenuOption = ({ label, onClick, style }) => (
     <div className="col-span-full mb-4">
@@ -219,7 +229,7 @@ export default function Navbar() {
                 key={label}
                 label={label}
                 onClick={onClick}
-                style={mobileOptionStyle}
+              style={mobileOptionStyle}
               />
             ))}
           </GridLayout>
